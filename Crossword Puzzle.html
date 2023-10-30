@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<title> Crossword </title>
+<style>
+	#table1{
+		background-color:black;
+		border-collapse:collapse;
+		}
+	#num{
+		border-collapse:collapse;
+		background-color:white
+		}
+	#empty{
+		border-collapse:collapse;
+		background-color:white;
+		width:500px;
+		height:40px;
+		text-align:left;
+		}
+	td{
+		width:40px;
+		height:40px;
+		text-align:center;
+		
+		}
+	input{
+		width:40px;
+		height:40px;
+		font-size:30px;
+		text-align:center;
+		}
+	.butt{
+		text-align:center;
+		height:20px;
+		width:100px;
+		font-size:10pt;
+	}
+	#er{
+		width:350px;
+		height:20px;
+		font-size:15px;
+		text-align:left;
+	}
+</style>
+</head>
+<body>
+<center>
+<form method="post">
+<table id="table1">
+<tr>
+	<td id="empty"></td>
+	<td id="num">&nbsp </td><td id="num">1</td><td id="num">2</td><td id="num">3</td><td id="num">4</td><td id="num">5</td><td id="num">6</td><td id="num">7</td>
+<tr> 
+	<td id="empty">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+	<td id="num">1</td>
+	<td><input type="text" id=k1 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k2 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k3 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k4 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k5 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k6 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k7 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+</tr>
+<tr> 
+	<td id="empty"></td>
+	<td id="num">2</td>
+	<td><input type="text" id=k8 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k9 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k10 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k11 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+</tr>
+<tr> 
+	<td id="empty">
+		<input class="butt" type="reset" value="Καθαρισμός"> &nbsp &nbsp
+		<button class="butt" type="button" onclick="myFunction()"> &nbsp &nbsp Υποβολή &nbsp &nbsp </button> &nbsp &nbsp
+		<button style="width:150px;" class="butt" type="button" onclick="Clickshow()"> &nbsp &nbspΔες τη λύση&nbsp &nbsp </button>
+	</td>
+	<td id="num">3</td>
+	<td><input type="text" id=k12 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k13 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k14 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k15 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k16 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k17 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k18 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+</tr>		
+<tr>
+	<td id="empty"></td> 
+	<td id="num">4</td>
+	<td><input type="text" id=k19 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k20 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k21 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k22 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+</tr>
+<tr> 
+	<td id="empty"></td>
+	<td id="num">5</td>
+	<td><input type="text" id=k23 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k24 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k25 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k26 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k27 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k28 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k29 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+</tr>		
+<tr> 
+	<td id="empty"></td> 
+	<td id="num">6</td>
+	<td><input type="text" id=k30 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k31 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k32 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td></td>
+	<td><input type="text" id=k33 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+</tr>
+<tr> 
+	<td id="empty"></td>
+	<td id="num">7</td>
+	<td><input type="text" id=k34 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k35 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k36 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k37 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k38 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k39 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+	<td><input type="text" id=k40 pattern="[Α-Ωα-ω]{1}" maxlength="1" required onchange="change(this.id)" onkeyup="this.value = this.value.toUpperCase();"></td>
+</tr>	
+</table>
+<br><br><br>
+<table>
+    <tr>
+		<th id="er"><h2>Οριζόντια</h2></th>
+		<th id="er"><h2>Κάθετα</h2></th>
+	</tr>
+	<tr>
+		<td id="er">
+		1. Ρωγμές,ραγίσματα,σχισμές.<br>
+		3. Φωνή προβάτου ή κατσίκας.<br>
+		5. Κι έτσι τα καναρίνια.<br>
+		7. Γυναίκα της μαύρης φυλής(σύμφωνα με το Βικιλεξικό).
+		</td>
+		<td id="er">
+		1. Η σύζηγος του Ισαάκ.<br>
+		3. Πράα, ήπια αυτά.<br>
+		5. Επαίσχυντοι.<br>
+		7.Αυτά που δεν πεθαίνουν, τα αιώνια.<br>
+		</td>
+	</tr>
+</table>
+</form>
+</center>	
+<script>
+	function myFunction() {
+			var x=["Ρ","Η","Γ","Μ","Α","Τ","Α","Ε","Α","Ι","Θ","Β","Ε","Λ","Α","Σ","Μ","Α","Ε","Η","Χ","Ν","Κ","Α","Ν","Α","Ρ","Ι","Α","Κ","Ι","Ο","Τ","Α","Ρ","Α","Π","Ι","Ν","Α"];	
+			var correct=0;
+			for(var i=0;i<=39;i++){
+				if( x[i]==""){
+					;
+				}
+				else{
+				var tmp= i+1;
+				var istring= tmp.toString();
+				var coordinatesLetter = 'k';
+				var coordinates = coordinatesLetter.concat(istring);
+					if (document.getElementById(coordinates).value != x[i]){
+						document.getElementById(coordinates).style.color = "red";
+					}
+					else{
+						correct= correct +1;
+					}
+				}
+			}
+		if(correct==40){
+			alert("Μου αρέσει πολύ η javascript");
+		}
+		else{
+			alert("προσπάθησε ξανά");
+		}
+	}
+	function change(x){
+		document.getElementById(x).style.color = "black";
+	}
+	function Clickshow() {
+			var x=["Ρ","Η","Γ","Μ","Α","Τ","Α","Ε","Α","Ι","Θ","Β","Ε","Λ","Α","Σ","Μ","Α","Ε","Η","Χ","Ν","Κ","Α","Ν","Α","Ρ","Ι","Α","Κ","Ι","Ο","Τ","Α","Ρ","Α","Π","Ι","Ν","Α"];	
+			for(var i=0;i<=39;i++){
+				if( x[i]==""){
+					;
+				}
+				else{
+				var tmp= i+1;
+				var istring= tmp.toString();
+				var coordinatesLetter = 'k';
+				var coordinates = coordinatesLetter.concat(istring);
+				document.getElementById(coordinates).value= x[i];	
+				document.getElementById(coordinates).style.color = "black";
+			}
+		}			
+	}
+</script>
+</body>
+</html>
